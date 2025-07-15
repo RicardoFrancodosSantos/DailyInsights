@@ -20,7 +20,7 @@ jobs:
 
       - name: Gerar arquivo e commit
         run: |
-          (Get-Date).ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss 'UTC'") > dataAtual.txt
+          echo "$(date '+%Y-%m-%d %H:%M:%S UTC')" > dataAtual.txt  
           git config user.name "RicardoFrancodosSantos"                  
           git config user.email "ricardofrancosantos@gmail.com"            
           git add dataAtual.txt                                  
